@@ -1,78 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS Pseudo Elements</title>
-    <link rel="stylesheet" href="./assets/reset.css" />
-    <link rel="stylesheet" href="./assets/style.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </head>
 
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Employee Payroll Tracker</title>
+  <link rel="stylesheet" href="./assets/reset.css" />
+  <link rel="stylesheet" href="./assets/tablestyle.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div class="wrapper">
     <header>
-      <h1>CSS</h1>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#"><button id="addUserBtn">Add Group Member</button></a></li>
-          <li><a href="#"><button id="addExpenseBtn">Add Expenses</button></a></li>
-        </ul>
-      </nav>
+      <h1>Cost Calculator</h1>
     </header>
+    <div class="card">
+      <div class="card-header">
+       <h2>Group Trip</h2>
+      </div>
+      <div class="card-body">
+       <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Expense Description</th>
+            <th>Expense</th>
+          </tr>
+        </thead>
+        <tbody id="employee-table">
+        </tbody>
+       </table>
+      </div>
+      <div class="card-footer">
+        <button id="groupMembers-btn" class="btn">Add Group Members</button>
+        <button id="expense-btn" class="btn">Add Expense</button>
 
-    <main>
-      <section>
-        <article>
-          <h2>Pseudo Elements</h2>
-          <div>
-            <p>
-              We can do some cool stuff with the pseudo elements ::before and
-              ::after. For every element on the page, we basically get two more!
-              Let's try a few here.
-            </p>
-            <h3>Header</h3>
-            <p>
-              Notice the header above? If you look at our 'index.html' file, the
-              header text is simply "CSS". But using the pseudo element ::after
-              on the header, we added the words "Pseudo Elements" and gave it a
-              different font and color.
-            </p>
-            <h3>H3 headings</h3>
-            <p>
-              Notice the h3 headings? Using the pseudo element ::before, we added
-              an asterisk before each of the h3 headings.
-            </p>
-            <h3>Nav Items</h3>
-            <p>
-              Notice the navbar items? Using both ::before and ::after pseudo
-              elements on the navbar items, we added blue symbols around each
-              one.
-            </p>
-            <h3>Tool Tips</h3>
-            <p>
-              A combination of a pseudo-class and a pseudo-element can be used
-              to create a <span id="css-tooltip">tooltip</span>
-            </p>
-          </div>
-        </article>
-      </section>
-      <aside>
-        <h2>Sign up to Learn More!</h2>
-        <form>
-          <input type="text" placeholder="E-mail address" />
-          <button>Submit</button>
-        </form>
-      </aside>
-    </main>
+      </div>
+    </div>
+  </div>
+  <script src="./assets/script.js"></script>
 
-    <footer>
-      <span>Thanks for visiting!</span>
-    </footer>
-  </body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
 </html>
-
-
