@@ -6,22 +6,23 @@ body {
   
   header {
     display: flex;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     justify-content: space-between;
     align-items: center;
     padding: 1%;
-    background-color: #13293d;
-    color: #fff;
+    background-color: #ac0000;
+    color: #f8f9ff;
   }
   
   h1 {
     font-size: 200%;
   }
   
-  /* Added the rest of the header text */
+
   h1::after {
     font-family: Impact;
-    content: 'Pseudo Elements';
-    color: #8ac4ff;
+    content: 'Cost Calculator';
+    color: #000000;
     margin-left: 5px;
   }
   
@@ -35,7 +36,7 @@ body {
     font-size: 150%;
   }
   
-  /* Added asterisk before every h3 heading */
+  
   h3::before {
     font-family: Impact;
     content: '\273A';
@@ -43,14 +44,7 @@ body {
     margin-right: 5px;
   }
   
-  /* Added symbols before and after the nav links */
-  nav li::before,
-  nav li::after {
-    content: '\2766';
-    color: #8ac4ff;
-    padding: 1%;
-    font-family: cursive;
-  }
+
   
   nav ul {
     display: flex;
@@ -81,7 +75,7 @@ body {
   }
   
   article {
-    border-bottom: 1px solid #d8a47f;
+    border-bottom: 1px solid #ac0000;
   }
   
   article p {
@@ -115,7 +109,7 @@ body {
     display: flex;
     justify-content: center;
     padding: 2%;
-    background-color: #13293d;
+    background-color: #ac0000;
     color: #fff;
   }
   
@@ -126,7 +120,6 @@ body {
     cursor: pointer;
   }
   
-  /* Use a combination of pseudo-class and pseudo-element to create a tooltip */
   #css-tooltip:hover::after {
     content: "A message which appears when a cursor is positioned over an icon, image, hyperlink, or other element in a graphical user interface";
     position: absolute;
