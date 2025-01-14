@@ -1,27 +1,27 @@
 // Get a reference to the #add-employees-btn element
-const addUserBtn = document.querySelector("#addUserBtn");
-const addExpenseBtn = document.querySelector("#addExpenseBtn");
+const addEmployeesBtn = document.querySelector("#add-employees-btn");
+const addGroupMembersBtn = document.querySelector("#add-group-members-btn");
 
 // Collect employee data
-const collectFriends = function () {
+const collectEmployees = function () {
   // TODO: Get user input to create and return an array of employee objects
-  const friends = [
+  const employees = [
   ];
 
  // let employee = { firstName: "", lastName: "", salary: 0 };
 
-  let addFriends = true;
-  while (addFriends) {
+  let addEmployee = true;
+  while (addEmployee) {
 
-    let costDescription = prompt("Enter employee last name:");
-    let costOfExpense = prompt("Enter employee first name:");
-    //let salary = prompt("Enter employee salary:");
+   // let firstName = prompt("Enter employee first name:");
+    let lastName = prompt("Enter cost description:");
+    let salary = prompt("Enter cost:");
 
     
 
 
    const employee = {
-      firstName: firstName,
+     // firstName: firstName,
       lastName: lastName,
       salary: parseInt(salary),
    };
@@ -29,7 +29,7 @@ const collectFriends = function () {
 
     employees.push(employee);
 
-    addEmployee = confirm("Would you like to add another employee?");
+    addEmployee = confirm("Would you like to add another expense?");
   }
   return employees;
 };
@@ -57,18 +57,6 @@ const getRandomEmployee = function (employeesArray) {
     `Congratulations to ${randomEmployee.firstName} ${randomEmployee.lastName}, our random drawing winner!`
   );
 };
-
-//Example
-// const function1 = function () {
-//   const f1 = ["1", "2" ,"3"]
-//   function2(f1)
-// }
-// const function2 = function (info2) {
-// for (const number of info2){
-//   console.log(number);
-// }
-// }
-// function1()
 
 /*
   ====================
@@ -135,4 +123,5 @@ const trackEmployeeData = function () {
 };
 
 // Add event listener to 'Add Employees' button
+addGroupMembersBtn.addEventListener("click", trackEmployeeData);
 addEmployeesBtn.addEventListener("click", trackEmployeeData);
