@@ -58,12 +58,12 @@ function calculateCostSplit() {
 
     // Add total cost
     const totalCostCell = document.createElement('td');
-    totalCostCell.textContent = `$${totalCost.toFixed(2)}`;
+    totalCostCell.textContent = `$${totalCost.toLocaleString(undefined, { minimumFractionDigits: 2 })}`;
     row.appendChild(totalCostCell);
 
     // Add per person cost
     const perPersonCostCell = document.createElement('td');
-    perPersonCostCell.textContent = `$${perPersonCost.toFixed(2)}`;
+    perPersonCostCell.textContent = `$${perPersonCost.toLocaleString(undefined, { minimumFractionDigits: 2 })}`;
     row.appendChild(perPersonCostCell);
 
     // Append the row to the table
