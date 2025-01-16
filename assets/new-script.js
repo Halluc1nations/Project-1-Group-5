@@ -57,9 +57,9 @@ function calculateCostSplit() {
     row.appendChild(memberCell);
 
     // Add total cost
-    const totalCostCell = document.createElement('td');
-    totalCostCell.textContent = `$${totalCost.toLocaleString(undefined, { minimumFractionDigits: 2 })}`;
-    row.appendChild(totalCostCell);
+    // const totalCostCell = document.createElement('td');
+    // totalCostCell.textContent = `$${totalCost.toLocaleString(undefined, { minimumFractionDigits: 2 })}`;
+    // row.appendChild(totalCostCell);
 
     // Add per person cost
     const perPersonCostCell = document.createElement('td');
@@ -69,7 +69,14 @@ function calculateCostSplit() {
     // Append the row to the table
     resultsTable.appendChild(row);
   });
+
+const totalCostEl = document.querySelector('.totalCost');
+totalCostEl.textContent = ` Total Cost: $${totalCost.toLocaleString(undefined, { minimumFractionDigits: 2 })}`;
+
+
 }
+
+
 
 // Start the program
 //getTripData();
