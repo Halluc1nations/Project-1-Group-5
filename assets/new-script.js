@@ -1,5 +1,16 @@
-const groupMembers = [];
-const tripCost = [];
+const readLocalStorage = function (key) {
+  const data = JSON.parse(localStorage.getItem(key));
+  return data ? data : [];
+};
+
+const storeLocalStorage = function (key, data) {
+ 
+  localStorage.setItem(key, JSON.stringify(data));
+};
+
+
+const groupMembers = readLocalStorage('groupMembers');
+const tripCost = readLocalStorage('tripCost');
 
 const addMemberButton = document.getElementById('add-groupMember-btn');
 addMemberButton.addEventListener('click', getTripData);
@@ -17,7 +28,7 @@ function getTripData() {
     const addAnother = window.confirm("Would you like to add another group member?");
     if (!addAnother) break;
   }
-
+storeLocalStorage("groupMembers", groupMembers)
 }
 
 function getCost() {
@@ -33,7 +44,7 @@ function getCost() {
     const keepGoing = window.confirm("Would you like to add another item?");
     if (!keepGoing) break;
   }
-
+  storeLocalStorage("tripCost", tripCost)
   calculateCostSplit();
 }
 
@@ -80,3 +91,21 @@ totalCostEl.textContent = ` Total Cost: $${totalCost.toLocaleString(undefined, {
 
 // Start the program
 //getTripData();
+
+//LocalStorage
+
+const renderTrip = function () {
+  const tripData = readLocalStorage('tripCost');
+  if (!tripData.length) {
+      return;
+  }
+
+  tripData.forEach((post) => {
+      const article = document.createElement('article');
+      buildElement(getCost, getTripData, calculateCostSplit);
+  });
+  };
+
+// TODO: Call the `renderBlogList` function
+
+renderTrip();
