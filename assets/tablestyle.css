@@ -100,7 +100,7 @@ tbody tr:nth-child(even) {
 
 .btn {
   border: none;
-  background-color: rgb(49, 144, 252);
+  background-color: #3190fc;
   color: rgb(49, 144, 252);
   display: inline-block;
   font-size: 22px;
@@ -120,6 +120,18 @@ button[disabled] {
   float: right;
 }
 
+footer {
+  font-size: large;
+  background-color: #3190fc;
+  color: rgb(255, 255, 255);
+  justify-content: center;
+  padding: 15px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  min-width: 100%;
+  display: flex;
+}
 
 @media (max-width: 690px) {
   .btn {
